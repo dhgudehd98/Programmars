@@ -1,11 +1,12 @@
 class Solution {
     public int solution(int n) {
-        //2. 수학적으로 계산하는 방법
+        //1. String 형으로 변경해서 푸는 방법 
         int answer = 0; // 각 자릿수의 합을 저장하는 변수
+        String str = String.valueOf(n);
+        String[] array = str.split("");
         
-        while(n > 0){
-            answer += n % 10;
-            n /= 10;
+        for(int i = 0; i< array.length; i++){
+            answer += Integer.parseInt(array[i]);
         }
         
         
